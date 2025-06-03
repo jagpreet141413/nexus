@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: "Portfolio", href: "#portfolio" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Blog", href: "#blog" },
+    { name: "EquiCore", href: "#EquiCore" },
     { name: "Contact Us", href: "#contact" },
   ];
 
@@ -48,7 +49,7 @@ const Navbar = () => {
         width: "100%",
         zIndex: 50,
         color: "white",
-        backgroundColor: isScrolled || isMobile ? "#00acc1" : "transparent",
+        backgroundColor: isScrolled || isMobile ? "#ffc34d" : "transparent",
         backdropFilter: isScrolled && !isMobile ? "blur(200px)" : "none",
         transition:
           "background-color 0.3s ease, backdrop-filter 0.3s ease, transform 0.3s ease, padding 0.3s ease",

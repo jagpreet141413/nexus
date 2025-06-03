@@ -251,7 +251,7 @@ const Contact = () => {
             style={{
               textTransform: 'uppercase',
               fontWeight: 300,
-              background: '#00acc1',
+              background: '#ffc34d',
               color: '#FCFDFD',
               width: '10rem',
               height: '2.32rem',
@@ -292,6 +292,7 @@ const Contact = () => {
         >
           {successMsg}
         </div>
+        
       </div>
     </div>
   );

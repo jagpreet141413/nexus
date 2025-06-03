@@ -47,7 +47,7 @@ const About = () => {
 
         .about-image:hover {
           transform: scale(1.1);
-          box-shadow: 0 12px 30px #00acc1;
+          box-shadow: 0 12px 30px #ffc34d;
           cursor: pointer;
         }
 
@@ -79,20 +79,12 @@ const About = () => {
         {/* Left text content */}
         <div className="about-text" style={{ flex: 1, }} >
           <h2 style={{ marginBottom: "16px", fontSize: "24px",textAlign:'center' }}>About Us</h2>
-          <p style={{ lineHeight: 1.6, fontSize: "18px",textAlign:'center' }}>
-            EquiCore Nexus is a strategic finance and investment advisory firm
-            specializing in high-growth sectors. We partner with startups and
-            investors to navigate complex markets, identify growth
-            opportunities, and optimize investment strategies. Our expert team
-            delivers deep market insights, robust financial modeling, and
-            personalized advisory to drive sustainable success.
-            <br />
-            <br />
-            Our mission is to empower visionary entrepreneurs and discerning
-            investors through precision, innovation, and integrity. We believe
-            that sound financial guidance is the cornerstone of building
-            transformative ventures and lasting wealth.
-          </p>
+         <p style={{ lineHeight: 1.6, fontSize: "18px", textAlign: 'center' }}>
+  EquiCore Nexus is a strategic finance and investment advisory firm led by Chartered Accountants, CFAs, and MBAs with 15+ years of combined experience across Indian and global markets. <br /><br />
+  We empower startups, scale-ups, and investors in high-growth sectors with sharp financial modeling, tailored investment strategies, and deep industry insights. Our expertise spans SaaS, EV, Logistics, Manufacturing, and Consumer sectors. <br /><br />
+  Our mission is to support ambitious entrepreneurs and discerning investors with clarity, speed, and strategic foresight—helping them unlock long-term value in a complex financial landscape.
+</p>
+
         </div>
 
         {/* Right floating image */}

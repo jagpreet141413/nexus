@@ -12,6 +12,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
+import EquiCoreEdge from './components/EquiCoreEdge';
 function App() {
   return (
     <div className="App">
@@ -24,7 +25,9 @@ function App() {
       {/* <Newsletter /> */}
       <Testimonials/>
          <Blog />
+         <EquiCoreEdge/>
       <Contact />
+      
       <Footer />
       {/* <HomePage/> */}
     </div>

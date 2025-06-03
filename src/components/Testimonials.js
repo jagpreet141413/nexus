@@ -6,13 +6,13 @@ import 'slick-carousel/slick/slick-theme.css';
 const testimonials = [
   {
     quote:
-      "EquiCore Nexus’ analysis and modeling were spot on—instrumental in helping us secure $1M in seed funding. Their insights are invaluable.",
+      "EquiCore Nexus’ analysis and modeling were spot on—instrumental in helping us secure seed funding. Their insights are invaluable.",
     author: "CEO, US Tech Startup",
   },
   {
     quote:
-      "The incredible detail and strategic thinking in their M&A advisory work have made EquiCore Nexus our go-to finance partner.",
-    author: "Managing Director, Global PE Firm",
+      "The incredible due diligence and sharp ability to uncover transaction insights from audit figures were critical in strengthening our deal negotiations.",
+    author: "Managing Director, Private Equity Fund",
   },
   {
     quote:
@@ -21,8 +21,8 @@ const testimonials = [
   },
   {
     quote:
-      "A trusted partner in our growth journey — their advisory has been top-notch and timely.",
-    author: "CFO, SaaS Company",
+      "Quick modeling turnaround with detailed revenue and operational KPIs built into the model—intuitive to operate and instrumental in driving better decisions.",
+    author: "Chief Financial Officer, SaaS Company",
   },
   {
     quote:
@@ -33,6 +33,27 @@ const testimonials = [
     quote:
       "Professional, insightful, and extremely reliable — EquiCore Nexus is our preferred financial consultant.",
     author: "Managing Partner, Venture Capital Firm",
+  },
+  // New testimonials from the presentation
+  {
+    quote:
+      "The team has been of great help and support. He has an eye for detail and analyzes even new business concepts nicely. I Recommend working with him. I will hire him again in the future.",
+    author: "Investment Platform CEO",
+  },
+  {
+    quote:
+      "Hi Shubham the Model was very good, Great Job It was approved by the client. Happy to build a long-term relationship.",
+    author: "Investment Banking Founder",
+  },
+  {
+    quote:
+      "Thank you for your great help with the acquisition modeling and Due diligence service to help us make better decisions.",
+    author: "PE Firm General Partner",
+  },
+  {
+    quote:
+      "He is a reliable partner for executing deals and delivering impactful pitch decks and financial models.",
+    author: "Fintech Business Owner",
   },
 ];
 
@@ -46,7 +67,7 @@ const Testimonials = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
-    adaptiveHeight: false, // important for consistent height
+    adaptiveHeight: false, // Keep this false for fixed height
     responsive: [
       {
         breakpoint: 768,
@@ -82,10 +103,15 @@ const Testimonials = () => {
             <div key={idx}>
               <div
                 className="mx-4 p-8 rounded-xl shadow-xl bg-white transition-transform duration-300 hover:scale-105 flex flex-col justify-between"
-                style={{ color: 'black', minHeight: '240px' }} // fixed height for uniformity
+                style={{ color: 'black', minHeight: '280px', maxHeight: '280px' }} // Increased and fixed height
               >
-                <blockquote className="text-xl italic mb-6 flex-grow">“{quote}”</blockquote>
-                <p className="font-semibold mt-4">– {author}</p>
+                <blockquote
+                  className="text-xl italic mb-6 flex-grow overflow-y-auto pr-2" // Added flex-grow and overflow-y-auto
+                  style={{ scrollbarWidth: 'thin', scrollbarColor: '#888 #f1f1f1' }} // Custom scrollbar for Firefox
+                >
+                  “{quote}”
+                </blockquote>
+                <p className="font-semibold mt-4 flex-shrink-0">– {author}</p> {/* Added flex-shrink-0 */}
               </div>
             </div>
           ))}

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const posts = [
+const initialPosts = [
   {
     title: '5 Red Flags in Early-Stage Fundraising',
     description:
@@ -19,7 +19,29 @@ const posts = [
   },
 ];
 
+const extraPosts = [
+  {
+    title: 'How to Attract Investors in a Competitive Market',
+    description:
+      'Learn how startups are building trust and standing out in 2025’s crowded funding space.',
+    url: 'https://www.forbes.com/sites/forbesfinancecouncil/2023/11/10/how-to-attract-investors-in-a-competitive-market/',
+    image:
+      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    title: 'Startup Financial Planning Guide',
+    description:
+      'From budgeting to forecasting — this guide helps founders understand how to control burn rate and scale efficiently.',
+    url: 'https://hbr.org/2020/11/a-guide-to-financial-planning-for-startups',
+    image:
+       'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
+  },
+];
+
 const Blog = () => {
+  const [showMore, setShowMore] = useState(false);
+  const allPosts = showMore ? [...initialPosts, ...extraPosts] : initialPosts;
+
   return (
     <section id="blog" className="py-16 sm:py-24 bg-slate-100">
       <div className="container mx-auto px-6">
@@ -32,8 +54,8 @@ const Blog = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
-          {posts.map(({ title, description, url, image }, idx) => (
+        <div className="grid gap-8 max-w-2xl mx-auto">
+          {allPosts.map(({ title, description, url, image }, idx) => (
             <article
               key={idx}
               className="bg-white rounded-xl shadow-lg transition-shadow duration-300 overflow-hidden group flex flex-col md:flex-row transform hover:scale-[1.03] hover:shadow-2xl"
@@ -48,6 +70,8 @@ const Blog = () => {
                 <p className="text-slate-600 mb-4 text-sm">{description}</p>
                 <a
                   href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[#007a8a] hover:text-[#004f54] font-semibold self-start group-hover:underline transition-colors duration-300"
                 >
                   Read More &rarr;
@@ -58,13 +82,14 @@ const Blog = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href="/blog"
-            className="inline-block border border-[#00acc1] text-[#00acc1] hover:bg-[#00acc1] hover:text-black transform hover:scale-105 transition-all duration-300 py-3 px-6 text-lg rounded-lg font-semibold"
-            style={{ backdropFilter: 'none' }}
-          >
-            View All Insights
-          </a>
+          {!showMore && (
+            <button
+              onClick={() => setShowMore(true)}
+              className="inline-block border border-[#00acc1] text-[#00acc1] hover:bg-[#00acc1] hover:text-black transform hover:scale-105 transition-all duration-300 py-3 px-6 text-lg rounded-lg font-semibold"
+            >
+              View More Insights
+            </button>
+          )}
         </div>
       </div>
     </section>
