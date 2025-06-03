@@ -153,7 +153,7 @@ const Navbar = () => {
             display: "flex",
             flexDirection: "column",
             gap: "16px",
-            backgroundColor: "#00acc1",
+            backgroundColor: "#ffc34d",
             color: "white",
           }}
         >
