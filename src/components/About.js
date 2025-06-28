@@ -47,7 +47,7 @@ const About = () => {
 
         .about-image:hover {
           transform: scale(1.1);
-          box-shadow: 0 12px 30px #ffc34d;
+          box-shadow: 0 12px 30px #996600	;
           cursor: pointer;
         }
 
@@ -90,7 +90,7 @@ const About = () => {
         {/* Right floating image */}
         <div style={{ flex: 1, display: "flex", justifyContent: 'center' }}>
           <img
-            src="/images/stock-bg.jpg"
+            src="/images/Gemini_Generated_Image_hwc0snhwc0snhwc0.png"
             alt="About EquiCore Nexus"
             className="about-image"
             style={{}}

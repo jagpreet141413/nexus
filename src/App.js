@@ -1,36 +1,18 @@
-import React from 'react';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Blog from './components/Blog';
-import Newsletter from './components/Newsletter';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import HomePage from './components/HomePage';
-import Navbar from './components/Navbar';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Portfolio from './components/Portfolio';
-import Testimonials from './components/Testimonials';
-import EquiCoreEdge from './components/EquiCoreEdge';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Portfolios from "./components/Portfolios";
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Portfolio/>
-   
-      {/* <Newsletter /> */}
-      <Testimonials/>
-         <Blog />
-         <EquiCoreEdge/>
-      <Contact />
-      
-      <Footer />
-      {/* <HomePage/> */}
-    </div>
+    <>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolios />} />
+      </Routes>
+    </Router>
+    </>
   );
 }
 

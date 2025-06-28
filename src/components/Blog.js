@@ -7,7 +7,7 @@ const initialPosts = [
       'Knowing what to avoid can significantly improve your chances of closing better deals with smarter positioning.',
     url: '/blog/5-red-flags',
     image:
-      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
+      '/images/Gemini_Generated_Image_hwc0slhwc0slhwc0.png',
   },
   {
     title: 'Funding Strategies in 2025',
@@ -15,7 +15,7 @@ const initialPosts = [
       'Explore innovative approaches to secure capital in a changing financial landscape.',
     url: '/blog/funding-strategies-2025',
     image:
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
+        '/images/Gemini_Generated_Image_3dme6g3dme6g3dme.png',
   },
 ];
 
@@ -26,7 +26,7 @@ const extraPosts = [
       'Learn how startups are building trust and standing out in 2025’s crowded funding space.',
     url: 'https://www.forbes.com/sites/forbesfinancecouncil/2023/11/10/how-to-attract-investors-in-a-competitive-market/',
     image:
-      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
+      '/images/ChatGPT Image Jun 18, 2025, 12_30_08 PM.png',
   },
   {
     title: 'Startup Financial Planning Guide',
@@ -34,7 +34,7 @@ const extraPosts = [
       'From budgeting to forecasting — this guide helps founders understand how to control burn rate and scale efficiently.',
     url: 'https://hbr.org/2020/11/a-guide-to-financial-planning-for-startups',
     image:
-       'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
+        '/images/Gemini_Generated_Image_hwc0shhwc0shhwc0.png',
   },
 ];
 

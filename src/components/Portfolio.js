@@ -1,5 +1,5 @@
 import React, { useState } from 'react'; // Import useState
-
+import { useNavigate } from 'react-router-dom';
 const projects = [
   {
     title: 'Financial Modeling & Pitch Deck',
@@ -188,9 +188,9 @@ const Portfolio = () => {
   const [visibleProjectCount, setVisibleProjectCount] = useState(6);
   const visibleProjects = projects.slice(0, visibleProjectCount);
   const remainingProjectsCount = projects.length - visibleProjectCount;
-
+const navigate = useNavigate();
   const handleViewMore = () => {
-    setVisibleProjectCount(projects.length); // Show all projects
+    navigate('/portfolio');
   };
 
   return (
@@ -213,7 +213,8 @@ const Portfolio = () => {
             >
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {project.title} ({project.year})
+                  {project.title}
+                   {/* ({project.year}) */}
                 </h3>
                 <h4 className="text-md text-gray-800 mb-1">{project.client}</h4>
                 <p className="text-gray-700">{project.description}</p>
@@ -229,7 +230,8 @@ const Portfolio = () => {
     className="hover:bg-[#e6b347] text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300"
     onClick={handleViewMore}
   >
-    View More ({remainingProjectsCount} +)
+    View More 
+    {/* ({remainingProjectsCount} +) */}
   </button>
 </div>
 
